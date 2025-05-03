@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edgecross - Leader in Membrane Contactor Technology</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes fadeSlideUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animate-fade-slide-up {
+      animation: fadeSlideUp 1s ease-out forwards;
+    }
+  </style>
+</head>
+<body class="font-sans">
+  <!-- include header.html -->
+  <!-- Hero Section -->
+  <section id="home" class="relative h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('image/cover.jpg')">
+    <div class="absolute inset-0 bg-black opacity-10"></div>
+    <div class="relative text-center text-white">
+      <p class="text-lg md:text-xl mb-2 animate-fade-slide-up">From dissolved gas management</p>
+      <p class="text-lg md:text-xl mb-2 animate-fade-slide-up" style="animation-delay: 0.3s;">To water-vapor loop optimization</p>
+      <h1 class="text-5xl md:text-7xl font-extrabold mb-8">Edgecross</h1>
+      <a href="technology.html" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition">Discover More</a>
+    </div>
+  </section>
+
+  <!-- Description Section -->
+  <section class="py-16 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold mb-6">Welcome to Edgecross</h2>
+      <p class="text-lg text-gray-700 mb-6">
+        Edgecross pioneers membrane contactor technology, delivering innovative solutions for water-vapor loop optimization and dissolved gas management across industries worldwide.
+      </p>
+      <a href="about.html" class="text-blue-600 hover:underline">Learn More About Us</a>
+    </div>
+  </section>
+
+  <!-- include footer.html -->
+</body>
+</html>
