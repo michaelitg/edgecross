@@ -7,6 +7,28 @@
   <meta name="robots" content="INDEX,FOLLOW">
   <title>Edgecross - Product</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .arrow {
+      position: absolute;
+      background: #007bff;
+      height: 2px;
+      z-index: 10;
+    }
+    .arrow::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      border-left: 8px solid #007bff;
+      right: -8px;
+      top: -5px;
+    }
+    .components-container {
+      position: relative;
+    }
+  </style>
 </head>
 <body class="font-sans">
   <!-- include header.html -->
@@ -31,25 +53,28 @@
     <!-- Core Components Section -->
     <div class="section mb-12">
       <h2 class="text-2xl font-semibold text-center mb-8">Core Components</h2>
-      <div class="components grid md:grid-cols-[70%_30%] gap-8">
+      <div class="components-container components grid md:grid-cols-[70%_30%] gap-8">
         <div class="component text-center">
-          <img src="image/components.png" style="width: 75%;" alt="Membrane Contactor Overview" class="rounded-lg shadow-lg w-full h-88 object-cover mb-4">
+          <img src="image/components.png" style="width: 75%;" alt="Membrane Contactor Overview" class="rounded-lg shadow-lg w-full h-88 object-cover mb-4" id="overview-img">
           <p class="text-lg text-gray-700">Membrane Contactor Overview</p>
         </div>
         <div class="grid gap-8" width: 75%;>
           <div class="componentr">
-            <img src="image/component1.png" alt="Hollow Fiber Membrane">
+            <img src="image/component1.png" alt="Hollow Fiber Membrane" id="comp1-img">
             <p class="text-lg text-gray-700">Hollow Fiber Membrane Filament</p>
           </div>
           <div class="component">
-            <img src="image/component2.png" alt="Membrane Tube Wall (Microscope)">
+            <img src="image/component2.png" alt="Membrane Tube Wall (Microscope)" id="comp2-img">
             <p class="text-lg text-gray-700">Membrane Tube Wall (Microscopic View)</p>
           </div>
           <div class="component">
-            <img src="image/component3.png" alt="Cross-section of Membrane">
+            <img src="image/component3.png" alt="Cross-section of Membrane" id="comp3-img">
             <p class="text-lg text-gray-700">Cross-section of Hollow Fiber</p>
           </div>
         </div>
+        <div class="arrow" id="arrow1"></div>
+        <div class="arrow" id="arrow2"></div>
+        <div class="arrow" id="arrow3"></div>
       </div>
     </div>
 
@@ -128,7 +153,29 @@
         </div>
       </div>
     </section>
-
+    <script> 
+    function drawArrows() { 
+    const overviewImg = document.getElementById('overview-img'); const comp1Img = document.getElementById('comp1-img'); const comp2Img = document.getElementById('comp2-img'); const comp3Img = document.getElementById('comp3-img'); 
+    const arrow1 = document.getElementById('arrow1'); const arrow2 = document.getElementById('arrow2'); const arrow3 = document.getElementById('arrow3'); 
+    const overviewRect = overviewImg.getBoundingClientRect(); 
+    const comp1Rect = comp1Img.getBoundingClientRect(); 
+    const comp2Rect = comp2Img.getBoundingClientRect(); 
+    const comp3Rect = comp3Img.getBoundingClientRect(); 
+    const containerRect = document.querySelector('.components-container').getBoundingClientRect(); 
+    // Check if screen width is mobile (below md breakpoint, ~768px) 
+    if (window.innerWidth <= 768) { arrow1.style.display = 'none'; arrow2.style.display = 'none'; arrow3.style.display = 'none'; return; } 
+    else { arrow1.style.display = 'block'; arrow2.style.display = 'block'; arrow3.style.display = 'block'; }
+     // Start point (middle of the right edge of overview image) with scroll adjustment 
+     const startX = overviewRect.left + overviewRect.width- containerRect.left; 
+     const startY = overviewRect.top + overviewRect.height / 2 - containerRect.top;
+     // End points (middle of the left edge of each component image) with scroll adjustment 
+     const end1X = comp1Rect.left - containerRect.left; const end1Y = comp1Rect.top + comp2Rect.height / 2 - containerRect.top ; 
+     const end2X = comp2Rect.left - containerRect.left; const end2Y = comp2Rect.top + comp2Rect.height / 2 - containerRect.top; 
+     const end3X = comp3Rect.left - containerRect.left; const end3Y = comp3Rect.top + comp3Rect.height / 2 - containerRect.top; // Arrow 1 (to Hollow Fiber Membrane Filament) 
+     const dx1 = end1X - startX; const dy1 = end1Y - startY; const angle1 = Math.atan2(dy1, dx1) * 180 / Math.PI; arrow1.style.width = `${Math.sqrt(dx1 * dx1 + dy1 * dy1)}px`; arrow1.style.left = `${startX}px`; arrow1.style.top = `${startY}px`; arrow1.style.transform = `rotate(${angle1}deg)`; arrow1.style.transformOrigin = '0 0'; // Arrow 2 (to Membrane Tube Wall) 
+     const dx2 = end2X - startX; const dy2 = end2Y - startY; const angle2 = Math.atan2(dy2, dx2) * 180 / Math.PI; arrow2.style.width = `${Math.sqrt(dx2 * dx2 + dy2 * dy2)}px`; arrow2.style.left = `${startX}px`; arrow2.style.top = `${startY}px`; arrow2.style.transform = `rotate(${angle2}deg)`; arrow2.style.transformOrigin = '0 0'; // Arrow 3 (to Cross-section of Hollow Fiber) 
+     const dx3 = end3X - startX; const dy3 = end3Y - startY; const angle3 = Math.atan2(dy3, dx3) * 180 / Math.PI; arrow3.style.width = `${Math.sqrt(dx3 * dx3 + dy3 * dy3)}px`; arrow3.style.left = `${startX}px`; arrow3.style.top = `${startY}px`; arrow3.style.transform = `rotate(${angle3}deg)`; arrow3.style.transformOrigin = '0 0'; } // Run on load, resize, and scroll 
+     window.addEventListener('load', drawArrows); window.addEventListener('resize', drawArrows); window.addEventListener('scroll', drawArrows); </script>
   <!-- include footer.html -->
 </body>
 </html>
