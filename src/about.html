@@ -11,6 +11,28 @@
     body {
       background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
     }
+    .history-link {
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .history-link:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    .history-link:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: rgba(255,255,255,0.1);
+      transition: all 0.6s ease;
+    }
+    .history-link:hover:before {
+      left: 100%;
+    }
   </style>
 </head>
 <body class="font-sans pt-16 text-white">
@@ -30,17 +52,119 @@
       <div class="md:grid md:grid-cols-2 md:gap-8">
         <div>
           <p class="text-lg mb-4">
-            <strong>Edgecross</strong> is the birthplace of membrane contactor technology in China. Established in March 2013, we specialize in the research, development, production, and engineering of membrane contactors, complete skid systems, and integrated application solutions.
+            <strong>Edgecross</strong> is the birthplace of membrane contactor technology in China. Established in April 2013, we specialize in the research, development, manufacturing, and engineering of membrane contactors, degassing membranes, and integrated gas-liquid contacting systems. Our unique structure was granted a national patent in April 2014 and has been continuously improved, with second-generation products patented in December 2020.
           </p>
           <p class="text-lg mb-4">
-            As a full-technology chain provider, we offer end-to-end solutions that enhance safety, improve energy efficiency, and prevent corrosion across the entire circulation system—from desalinated water to steam and condensate. Our innovations support industries in achieving their goals of energy savings, carbon reduction, and lower product unit consumption.
+            Located in Suzhou, Jiangsu province, China, Edgecross is a professional company with membrane contactor/degassing membrane products and their applications as our core business. To date, we have sold over 6,000 contactors and 200+ gas-liquid contacting systems to customers worldwide, including South Korea, Japan, Vietnam, Malaysia, European Union, South Africa, and other regions. With an overseas office in Singapore, our sales and technical teams provide convenient international service.
+          </p>
+          <p class="text-lg mb-4">
+            Our products have been widely used for dissolved gas control of water in semiconductor, power generation, petrochemical, community heating, hot water corrosion resistance, and other industries for over 10 years. Even in critical applications with high reliability requirements, such as nuclear facilities and offshore oil & gas platforms, Edgecross products have demonstrated excellent performance.
           </p>
           <p class="text-lg mb-12">
-            We are committed to delivering high-performance, sustainable technologies that transform industrial operations and contribute to a cleaner, smarter future.
+            As a full-technology chain provider, we offer end-to-end solutions that enhance safety, improve energy efficiency, and prevent corrosion across the entire circulation system—from desalinated water to steam and condensate. Our innovations support industries in achieving their goals of energy savings, carbon reduction, and lower product unit consumption.
           </p>
+          <!-- Added History Link Button -->
+          <div class="mb-12">
+            <a href="history.html" class="history-link flex items-center justify-center bg-gradient-to-r from-blue-600 to-blue-800 text-white px-6 py-4 rounded-lg text-lg font-bold">
+              <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              Explore Our Journey Since 2013
+              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
         </div>
         <div class="mb-12">
           <img src="image/about.jpg" alt="Edgecross Team Photo" class="team-photo rounded-lg shadow-lg w-full" />
+        </div>
+      </div>
+
+      <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div class="flex justify-between items-center bg-gradient-to-r from-[#0f2027] to-[#2c5364] text-white py-4 px-6 rounded-lg mb-12">
+          <h2 class="text-3xl font-bold text-[#0071ff]">Global Presence</h2>
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+        </div>
+        <div class="section mb-12">
+          <p class="text-lg mb-8">
+            Our solutions have been deployed across diverse industries and regions worldwide. With a strong presence in Asia and expanding reach into Europe and Africa, we continue to bring innovative membrane contactor technology to global markets.
+          </p>
+          <div class="p-4 bg-gray-800 bg-opacity-50 rounded-lg">
+            <ul class="grid md:grid-cols-3 gap-4">
+              <li class="flex items-center p-2">
+                <span class="w-3 h-3 bg-blue-500 rounded-full mr-2"></span>
+                South Korea
+              </li>
+              <li class="flex items-center p-2">
+                <span class="w-3 h-3 bg-blue-500 rounded-full mr-2"></span>
+                Japan
+              </li>
+              <li class="flex items-center p-2">
+                <span class="w-3 h-3 bg-blue-500 rounded-full mr-2"></span>
+                Vietnam
+              </li>
+              <li class="flex items-center p-2">
+                <span class="w-3 h-3 bg-blue-500 rounded-full mr-2"></span>
+                Malaysia
+              </li>
+              <li class="flex items-center p-2">
+                <span class="w-3 h-3 bg-blue-500 rounded-full mr-2"></span>
+                European Union
+              </li>
+              <li class="flex items-center p-2">
+                <span class="w-3 h-3 bg-blue-500 rounded-full mr-2"></span>
+                South Africa
+              </li>
+            </ul>
+            <p class="mt-4 text-sm text-gray-300 italic">
+              With an overseas office in Singapore, our sales and technical teams are positioned to provide responsive support to clients worldwide.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div class="flex justify-between items-center bg-gradient-to-r from-[#0f2027] to-[#2c5364] text-white py-4 px-6 rounded-lg mb-12">
+          <h2 class="text-3xl font-bold text-[#0071ff]">Intellectual Property</h2>
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+          </svg>
+        </div>
+        <div class="section mb-12">
+          <p class="text-lg mb-4">
+            Innovation is at the heart of everything we do at Edgecross. Our commitment to technological advancement is reflected in our protected intellectual property:
+          </p>
+          <div class="bg-gray-800 bg-opacity-50 p-6 rounded-lg">
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <div class="flex-shrink-0 h-6 w-6 text-blue-500 mt-0.5">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                  </svg>
+                </div>
+                <span class="ml-3">Original membrane contactor technology patent granted in April 2014</span>
+              </li>
+              <li class="flex items-start">
+                <div class="flex-shrink-0 h-6 w-6 text-blue-500 mt-0.5">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                  </svg>
+                </div>
+                <span class="ml-3">Second-generation products patented in December 2020</span>
+              </li>
+              <li class="flex items-start">
+                <div class="flex-shrink-0 h-6 w-6 text-blue-500 mt-0.5">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                  </svg>
+                </div>
+                <span class="ml-3 text-yellow-300">Note: There are imitation products in the domestic market which may present infringement risks to users</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -72,7 +196,47 @@
       </div>
     </div>
 
-    <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div class="flex justify-between items-center bg-gradient-to-r from-[#0f2027] to-[#2c5364] text-white py-4 px-6 rounded-lg mb-12">
+          <h2 class="text-3xl font-bold text-[#0071ff]">Industry Applications</h2>
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+          </svg>
+        </div>
+        <div class="section mb-12">
+          <p class="text-lg mb-6">
+            Our membrane contactor technology and systems have been successfully deployed across numerous industries, delivering significant improvements in process efficiency, system safety, and environmental sustainability.
+          </p>
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-gray-800 bg-opacity-50 p-5 rounded-lg">
+              <h3 class="text-xl font-bold mb-3 text-[#0071ff]">Semiconductor</h3>
+              <p>Advanced water purification systems for ultra-pure water production, ensuring precision manufacturing processes.</p>
+            </div>
+            <div class="bg-gray-800 bg-opacity-50 p-5 rounded-lg">
+              <h3 class="text-xl font-bold mb-3 text-[#0071ff]">Power Generation</h3>
+              <p>Specialized solutions for boiler feed water treatment, cooling systems, and efficiency improvements for thermal and nuclear power plants.</p>
+            </div>
+            <div class="bg-gray-800 bg-opacity-50 p-5 rounded-lg">
+              <h3 class="text-xl font-bold mb-3 text-[#0071ff]">Petrochemical</h3>
+              <p>Critical gas removal applications enhancing process safety, equipment longevity, and product quality in refineries and chemical plants.</p>
+            </div>
+            <div class="bg-gray-800 bg-opacity-50 p-5 rounded-lg">
+              <h3 class="text-xl font-bold mb-3 text-[#0071ff]">Municipal Heating</h3>
+              <p>Energy-efficient solutions for district heating systems, reducing corrosion and extending infrastructure lifespan.</p>
+            </div>
+            <div class="bg-gray-800 bg-opacity-50 p-5 rounded-lg">
+              <h3 class="text-xl font-bold mb-3 text-[#0071ff]">Offshore Oil & Gas</h3>
+              <p>High-reliability systems designed for demanding marine environments and critical offshore operations.</p>
+            </div>
+            <div class="bg-gray-800 bg-opacity-50 p-5 rounded-lg">
+              <h3 class="text-xl font-bold mb-3 text-[#0071ff]">Food & Beverage</h3>
+              <p>Specialized water deoxygenation systems ensuring product quality and safety in food processing operations.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center bg-gradient-to-r from-[#0f2027] to-[#2c5364] text-white py-4 px-6 rounded-lg mb-12">
         <h2 class="text-3xl font-bold text-[#0071ff]">Our Core Values</h2>
         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -84,7 +248,7 @@
         <li class="mb-2"><span class="value-title font-semibold">Integrity:</span> We act with honesty, responsibility, and respect in everything we do.</li>
         <li class="mb-2"><span class="value-title font-semibold">Excellence:</span> We hold ourselves to the highest standards in product quality, engineering precision, and customer service.</li>
         <li class="mb-2"><span class="value-title font-semibold">Sustainability:</span> We are committed to reducing environmental impact through energy-saving and carbon-reduction technologies.</li>
-        <li class="mb-2"><span class="value-title font-semibold">Customer Focus:</span> We listen, adapt, and provide solutions tailored to each client’s needs and goals.</li>
+        <li class="mb-2"><span class="value-title font-semibold">Customer Focus:</span> We listen, adapt, and provide solutions tailored to each client's needs and goals.</li>
         <li class="mb-2"><span class="value-title font-semibold">Collaboration:</span> We believe great results come from strong partnerships—within our team and with our customers.</li>
       </ul>
       </div>
@@ -96,7 +260,7 @@
           </h2>
         </div>
         <p class="text-lg mb-6 py-5">Want to learn more about our technologies or solutions for your industry?</p>
-        <a href="mailto:guanweidong@edgecross.com" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition inline-block">Contact Us</a>
+        <a href="mailto:zhubin@edgecross.com" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition inline-block">Contact Us</a>
       </div>
     </div>
   </section>
