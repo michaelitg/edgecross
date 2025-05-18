@@ -31,6 +31,18 @@
     body {
       background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
     }
+    .product-card {
+      background: rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      transition: all 0.3s ease;
+    }
+    .product-card:hover {
+      background: rgba(255,255,255,0.12);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
   </style>
 </head>
 <body class="font-sans pt-16 text-white">
@@ -53,8 +65,14 @@
       </svg>
     </div>
     <div class="section mb-12">
-      <p class="text-lg">
+      <p class="text-lg mb-4">
         Our Membrane Contactor adopts a patented structure of "knit+central dispenser+baffle", which gives the membrane contactor module a specific surface area 27 times that of traditional towers and achieves over 10 times higher mass transfer efficiency.
+      </p>
+      <p class="text-lg">
+        Edgecross membrane is made from polypropylene (PP) by hollow fiber spinning-stretching process. The outstanding feature of Edgecross membrane is its high concentration of most probable pore size that is decisive to the material performance. By controlling the pore size, Edgecross membrane adjusts balance between gas penetration and water resistance pressure that is contradictory but required quite differently in various gas transfer and industrial applications.
+      </p>
+      <p class="text-lg mt-4">
+        Due to self-developed pore size measurement methods and strict quality control, Edgecross membrane has very high pore size distribution stability in mass production. Uniform material quality is the foundation for further performances of contactors and contacting systems.
       </p>
     </div>
 
@@ -85,7 +103,7 @@
           <p class="text-lg">Membrane Contactor Overview</p>
         </div>
         <div class="grid gap-8" style="width: 75%;">
-          <div class="componentr">
+          <div class="component">
             <img src="image/component1.png" alt="Hollow Fiber Membrane" id="comp1-img">
             <p class="text-lg">Hollow Fiber Membrane Filament</p>
           </div>
@@ -104,9 +122,100 @@
       </div>
     </div>
 
+    <!-- Product Series Section -->
+    <div class="section mb-12">
+      <div class="flex items-center bg-gradient-to-r from-[#0f2027] to-[#2c5364] text-white py-4 px-6 rounded-lg mb-8">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+        </svg>
+        <h3 class="text-2xl font-semibold text-[#00e5ff]">Product Series</h3>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- ETO Series -->
+        <div class="product-card">
+          <h4 class="text-xl font-bold text-[#00e5ff] mb-3">ETO Series</h4>
+          <p class="text-lg mb-2"><span class="font-semibold">Purpose:</span> Oxygen (O₂) Degassing</p>
+          <p class="mb-4">This series features high water resistance pressure and low gas penetration, designed for applications with minimal dissolved oxygen in water. For ultra-pure water applications, all materials (piping, potting epoxy, and gaskets) are super-clean and educt-free.</p>
+          <p class="text-sm text-gray-300">Ideal for semiconductor-grade ultrapure water with O₂ concentration requirements below 1ppb.</p>
+          <a href="product-list.html" class="inline-block mt-2 px-4 py-2 bg-[#00e5ff] text-black font-semibold rounded hover:bg-[#00b8cc] transition duration-300">
+            View ETO Proudct List →
+          </a>
+        </div>
+        
+        <!-- ETC Series -->
+        <div class="product-card">
+          <h4 class="text-xl font-bold text-[#00e5ff] mb-3">ETC Series</h4>
+          <p class="text-lg mb-2"><span class="font-semibold">Purpose:</span> Carbon Dioxide (CO₂) Degassing</p>
+          <p class="mb-4">Compared to the ETO series, these products have identical sizes and connection nozzles but slightly lower water resistance pressure and higher gas penetration due to higher CO₂ solubility in water.</p>
+          <p class="text-sm text-gray-300">Perfect for applications requiring removal of dissolved carbon dioxide from process water.</p>
+        </div>
+        
+        <!-- ETJ Series -->
+        <div class="product-card">
+          <h4 class="text-xl font-bold text-[#00e5ff] mb-3">ETJ Series</h4>
+          <p class="text-lg mb-2"><span class="font-semibold">Purpose:</span> Ammonia (NH₃) Degassing</p>
+          <p class="mb-4">This series has the lowest water resistance pressure but highest gas penetration to remove large amounts of dissolved ammonia from water. The fiber surface is coated with hydrophobic chemicals for improved contamination resistance.</p>
+          <p class="text-sm text-gray-300">Features extended service life in wastewater applications and industrial ammonia removal processes.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Systems & Solutions Section -->
+    <div class="section mb-12">
+      <div class="flex items-center bg-gradient-to-r from-[#0f2027] to-[#2c5364] text-white py-4 px-6 rounded-lg mb-8">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+        </svg>
+        <h3 class="text-2xl font-semibold text-[#00e5ff]">Complete Systems & Solutions</h3>
+      </div>
+      
+      <div class="bg-gradient-to-r from-[#203a43] to-[#2c5364] p-6 rounded-lg mb-8">
+        <h4 class="text-xl font-bold text-[#00e5ff] mb-4">Membrane Deaerator Systems</h4>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <p class="text-lg mb-4">
+              A membrane deaerator is a device that controls the dissolved oxygen content in water through membrane contactors. It is commonly used for removing dissolved oxygen from boiler feedwater or other deionized water.
+            </p>
+            <p class="text-lg mb-4">
+              Modern membrane deaerators feature highly efficient structural designs, enabling their mass transfer efficiency to exceed that of traditional contact towers (vacuum towers, absorption towers, desorption towers, etc.) by more than ten times.
+            </p>
+            <p class="text-lg">
+              In applications where dissolved oxygen in water is highly critical, such as ultra-pure water for semiconductors (O₂ dissolution <1 ppb) and feedwater for high-pressure boilers (O₂ dissolution <7 ppb), it offers significant advantages.
+            </p>
+          </div>
+          <div>
+            <img src="image/product1.png" alt="Membrane Deaerator System" class="rounded-lg shadow-lg w-full">
+          </div>
+        </div>
+        <br>
+        <a href="parts.html" class="inline-block bg-[#00e5ff] text-[#0f2027] font-bold py-3 px-8 rounded-lg hover:bg-[#00b8cc] transition duration-300">View 100t/h Deaerator Part List →</a>
+      </div>
+      
+      <div class="bg-gradient-to-r from-[#203a43] to-[#2c5364] p-6 rounded-lg mb-4">
+        <h4 class="text-xl font-bold text-[#00e5ff] mb-4">Combined Deoxygenation Process</h4>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <img src="image/product2.png" alt="Combined Deoxygenation Process" class="rounded-lg shadow-lg w-full">
+          </div>
+          <div>
+            <p class="text-lg mb-4">
+              To ensure that the produced water reaches a relatively low dissolved oxygen level (<300 ppb), a combined deoxygenation mode of "vacuum + sweep" is typically employed.
+            </p>
+            <p class="text-lg mb-4">
+              The membrane module consists of a water side and an air side. The water side processes pure water that needs deoxygenation, while the air side introduces a small amount of high-purity nitrogen gas at one end and extracts vacuum at the other.
+            </p>
+            <p class="text-lg">
+              The feed water passes through 2 to 4 stages of membrane contactor modules, reducing the dissolved oxygen to the desired level. The water pressure decreases by 0.1~0.3MPa. All removed gases are extracted under vacuum from the bottom of the air side by a vacuum pump.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Manufacturing Section -->
-    <div class="section py-20">
-      <div class="flex  items-center bg-gradient-to-r from-[#0f2027] to-[#2c5364] text-white py-4 px-6 rounded-lg mb-8">
+    <div class="section py-10">
+      <div class="flex items-center bg-gradient-to-r from-[#0f2027] to-[#2c5364] text-white py-4 px-6 rounded-lg mb-8">
         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
         </svg>
@@ -125,6 +234,7 @@
         <p class="py-5">Installed in a decarbonization system</p>
       </div>
     </div>
+    
     <!-- Download Button -->
     <div class="mb-12">
             <a href="https://github.com/michaelitg/edgecross/releases/download/zip-model/device.zip" target="_blank" class="history-link flex items-center justify-center bg-gradient-to-r from-blue-600 to-blue-800 text-white px-6 py-4 rounded-lg text-lg font-bold">
@@ -155,7 +265,7 @@
             <ul style="list-style: none; padding: 0; line-height: 1.8;">
               <li>• Membrane modules for semiconductor-grade ultrapure water</li>
               <li>• Boiler system upgrades for energy saving and efficiency</li>
-              <li>• Petrochemical & coal chemical: “oxygen-free demineralized water” for waste heat recovery and carbon reduction</li>
+              <li>• Petrochemical & coal chemical: "oxygen-free demineralized water" for waste heat recovery and carbon reduction</li>
               <li>• HVAC & heating: corrosion prevention to extend pipeline lifespan and reduce maintenance</li>
             </ul>
           </div>

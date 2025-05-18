@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.edgecross.tech/index.html</loc>
-    <priority>1.0</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.edgecross.tech/about.html</loc>
@@ -10,6 +10,14 @@
   </url>
   <url>
     <loc>https://www.edgecross.tech/product.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.edgecross.tech/product-list.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.edgecross.tech/parts.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
@@ -22,10 +30,14 @@
   </url>
   <url>
     <loc>https://www.edgecross.tech/cases.html</loc>
-    <priority>0.8</priority>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.edgecross.tech/qualifications.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.edgecross.tech/history.html</loc>
     <priority>0.8</priority>
   </url>
 </urlset>
